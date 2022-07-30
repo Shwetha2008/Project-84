@@ -27,17 +27,57 @@ function my_keydown(e)
 	keyPressed = e.keyCode;
 	console.log(keyPressed);
 	
-		if((keyPressed >=97 && keyPressed<=122)|| (keyPressed >=65 && keyPressed<=90))
+			if((keyPressed >=97 && keyPressed<=122)|| (keyPressed >=65 && keyPressed<=90))
 		{
 			aplhabetkey();
 			document.getElementById("d1").innerHTML = "You pressed an alphabet key";
 			console.log("alphabet key");
 		}
-	else
-	{
-		otherkey();
-		document.getElementById("d1").innerHTML="You pressed symbol or other key";
-	}
+
+	    else if(keyPressed >=48 && keyPressed<=57)
+		{
+			numberkey();
+			document.getElementById("d1").innerHTML = "You pressed a number key";
+			console.log("number key");
+	
+        }
+		else if(keyPressed >= 37 && keyPressed<=40)
+		{
+			arrowkey();
+			document.getElementById("d1").innerHTML = "You pressed an arrow key";
+			console.log("arrow key");
+	
+        }
+		else if(keyPressed ==17)
+		{
+			specialkey();
+			document.getElementById("d1").innerHTML = "You pressed a special key";
+			console.log("special key");
+	
+        }
+		else if(keyPressed ==18)
+		{
+			specialkey();
+			document.getElementById("d1").innerHTML = "You pressed a special key";
+			console.log("special key");
+	
+        }
+		else if(keyPressed ==27)
+		{
+			specialkey();
+			document.getElementById("d1").innerHTML = "You pressed a special key";
+			console.log("special key");
+	
+        }
+		else
+		{
+			otherkey();
+			document.getElementById("d1").innerHTML = "You pressed some other key";
+			console.log("other key");
+		}
+
+
+ 
 }
 
 function aplhabetkey()
@@ -66,4 +106,3 @@ function otherkey()
 	img_image="otherkey.png";
 	add();
 }
-	
